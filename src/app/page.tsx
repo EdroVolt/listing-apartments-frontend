@@ -5,8 +5,12 @@ import Link from "next/link";
 
 export default async function Home() {
   const { data: apartments } = await getData(
-    `${process.env.NEXT_PUBLIC_API_URL}/apartments/`
+    `${process.env.API_URL}/apartments/`
   );
+
+  if (!apartments?.length) {
+    return "No apartments found :(";
+  }
 
   return (
     <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-10">

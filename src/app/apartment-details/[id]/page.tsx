@@ -14,10 +14,14 @@ const ApartmentDetails: React.FC<ApartmentDetailsProps> = async ({
   params,
 }) => {
   const apartment: Apartment = await getData(
-    `${process.env.NEXT_PUBLIC_API_URL}/apartments/${params.id}/`
+    `${process.env.API_URL}/apartments/${params.id}/`
   );
 
   const fallBackImage = "/apartment-placeholder.png";
+
+  if (!apartment.name) {
+    return "Something went Wrong :(";
+  }
 
   return (
     <main className="grid grid-cols-1 md:grid-cols-2 gap-4 p-10">
