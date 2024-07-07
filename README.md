@@ -1,4 +1,4 @@
-# Listing Apartments App API
+# Listing Apartments App Frontend
 
 Basic NextJS App for listing and apartments
 
@@ -14,7 +14,7 @@ To run this app locally you have two options:
 
 - **Second:** Clone the repo
 
-- **Third:** open you terminal and make sure you are in the project root directory.
+- **Third:** Open your terminal and make sure you are in the project root directory.
 
 - **Forth:** Run the following command:
 
@@ -22,8 +22,7 @@ To run this app locally you have two options:
   docker-compose up --build
   ```
 
-  > This command will run three containers, frontend, backend and mongodb database. 
-  >  
+  > This command will run three containers, frontend, backend, and Mongodb database.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
